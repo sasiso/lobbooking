@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function()
+{
+	if (location.search != "")
+	{
+		var x = location.search.substr(1).split(";")
+		var y = x[0].split("&");
+		var z=y[0].split("=");
+		if(z[1]=="false")
+		{
+			alert("The Equipment was not deleted as equipment name not valid!!");
+		}
+		else
+		{
+			alert("The Equipment was deleted successfully!!");
+		}
+	}
+}
+</script>
+<meta name="GENERATOR" content="PageBreeze Free HTML Editor (http://www.pagebreeze.com)">
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
+<title>Delete Equipment</title>
+</head>
+<body bgcolor="#ffffff">
+<p align="center"><strong><font color="#004080" size="7"><u>Delete 
+Equipment 
+Page</u>  
+</font></strong></p>
+<p align="center"><strong><font color="#004080" 
+size=7></font></strong>&nbsp;</p>
+<form name="adminform" action="delEquipment.php" method="post">
+<p align="center"><strong><font color="#004080" size="7"><font size="4">Name 
+:</font>&nbsp;&nbsp; </font><input 
+style="WIDTH: 153px; HEIGHT: 22px" name="equipname"></strong></p><strong>
+<p align="center">
+<p align="center"><input type="submit" value="Delete" name="submit">&nbsp;&nbsp;&nbsp;<input type="reset" value=" Reset" name="reset"> 
+</form></p></font></strong>
+<p></p>
+<form action="welcomeAdmin.php">
+<p align="center">&nbsp;
+<input type="submit" value="Go Back">
+</form></p>
+</body>
+</html>

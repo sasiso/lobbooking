@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<meta name="GENERATOR" content="PageBreeze Free HTML Editor (http://www.pagebreeze.com)">
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
+<title>Administrator Login</title>
+</head>
+<script type="text/javascript">
+window.onload = function()
+{
+	if (location.search != "")
+	{
+		var x = location.search.substr(1).split(";")
+		var y = x[0].split("&");
+		var z=y[0].split("=");
+		if(z[1]=="false")
+		{
+			alert("The Username Or Password Not Valid!!");
+		}
+	}
+}
+</script>
+<body bgcolor="#ffffff">
+<p align="center"><strong><font 
+color=#004080 size=7><u>Administrator 
+Login Page</u> </font></strong></p>
+<p>
+<form name="adminform" action="checkAdmin.php" method="post"></p>
+<p align="center">
+<strong >
+<font 
+color=#004080 size=7><font size="4">Login 
+ID&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><input name="loginid"></font>
+</strong></p>
+<p align="center"><strong><font 
+color=#004080 size=7><font size="4">Password :</font> 
+&nbsp; </font><input 
+style="WIDTH: 153px; HEIGHT: 22px" type=password name=passwd></p>
+<p align="center">
+<p align="center"><input type="submit" value="Submit" name="submit">&nbsp;&nbsp;&nbsp;<input type="reset" value=" Reset" name="reset"> 
+</form></p>
+<p align="center">
+<form name="form1" action="index.html" method="post">&nbsp;<center><input type="submit" value="Go To Home Page" name="submit"> </center>
+</form>
+<p></p></font></strong>
+</body>
+</html>

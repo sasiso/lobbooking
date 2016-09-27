@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function()
+{
+	if (location.search != "")
+	{
+		var x = location.search.substr(1).split(";")
+		var y = x[0].split("&");
+		var z=y[0].split("=");
+		if(z[1]=="false")
+		{
+			alert("The Employee was not added due to duplicate entries!!");
+		}
+		else
+		{
+			alert("The Employee was added successfully!!");
+		}
+	}
+}
+function checkFields()
+{
+	if(document.addempform.ssoid.value=="")
+	{
+		alert("SSO ID Can't Be Empty");
+		return false;
+	}
+	else if(document.addempform.passwd.value=="")
+	{
+		alert("Please Assign an initial Password");
+		return false;
+	}
+	else if(document.addempform.empname.value=="")
+	{
+		alert("Please Enter Employee Name");
+		return false;
+	}
+	else if(document.addempform.email.value=="")
+	{
+		alert("Please Enter Employee ID");
+		return false;
+	}
+	else
+	{
+	document.addempform.action="addEmployee.php"
+	return true;
+	}
+}
+</script>	
+<meta name="GENERATOR" content="PageBreeze Free HTML Editor (http://www.pagebreeze.com)">
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
+<title>Add Employee</title>
+</head>
+<body bgcolor="#ffffff">
+<p align="center"><strong><font color="#004080" size="7" face="GE Inspira Pitch"><u>Employee&nbsp;Add 
+Page</u>  
+</font></strong></p>
+<p align="center"><strong><font face="GE Inspira Pitch" color="#004080" size="7"><font size="4"> 
+</font> </font></strong>&nbsp;</p>
+<form name="addempform" onSubmit="return checkFields()" method="post"><strong><font face="GE Inspira Pitch" color="#004080" size="7"><font face="GE Inspira Pitch" size="4">
+<p align="center"><strong><font face="GE Inspira Pitch" color="#004080" size="7"><font face="GE Inspira Pitch" size="4">SSO 
+ID&nbsp;:</font>&nbsp;&nbsp; </font><input 
+style="WIDTH: 153px; HEIGHT: 22px" name="ssoid"></strong></p>
+<p align="center"><strong><font face="GE Inspira Pitch" color="#004080" size="7"><font face="GE Inspira Pitch" size="4">Password 
+:</font>&nbsp;&nbsp; </font><input 
+style="WIDTH: 153px; HEIGHT: 22px" name="passwd" type=password></strong></p>
+<p align="center">Name 
+:</font>&nbsp;&nbsp; </font><input 
+style="WIDTH: 153px; HEIGHT: 22px" name="empname"></p>
+<p align="center"><strong><font face="GE Inspira Pitch" color="#004080" size="7"><font size="4">Email&nbsp;:</font>&nbsp;&nbsp; </font><input 
+style="WIDTH: 153px; HEIGHT: 22px" name="email"></strong></p></strong><strong>
+<p align="center">
+<p align="center"><input type="submit" value="Add" name="submit">&nbsp;&nbsp;&nbsp;<input type="reset" value=" Reset" name="reset"> 
+</form></p></font></strong>
+<p></p>
+<form name="form2" action="welcomeAdmin.php">
+<p align="center">&nbsp;
+<input type="submit" value="Go Back">
+</form></p>
+</body>
+</html>

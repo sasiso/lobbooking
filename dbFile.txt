@@ -1,0 +1,13 @@
+create database labbookingsite;
+
+use labbookingsite;
+
+create table admin( userid varchar(30),password varchar(30));
+
+insert into admin values('admin','admin');
+
+create table employee(ssoid varchar(10) primary key,name varchar(30),email varchar(30),password varchar(30),mobno varchar(15));
+
+create table equipment(equipId int(10) primary key,equipname varchar(30),description varchar(30));
+
+create table booking(equipId varchar(10) references equipment,ssoid varchar(10) references employee,dateofbooking date,timeslot int(2));

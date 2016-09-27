@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<?php
+session_start();
+if(!$_SESSION["loggedin"])
+{
+header("Location: index.html");
+exit;
+}
+?>
+<html>
+<head>
+<script type="text/javascript">
+function checkFields()
+{
+	if(document.addempform.oldpasswd.value=="")
+	{
+		alert("Please enter a valid Old Password");
+		return false;
+	}
+	else if(document.addempform.newpasswd.value=="")
+	{
+		alert("Please enter a valid new Password");
+		return false;
+	}
+	else
+	{
+	document.addempform.action="updateAdminPassword.php"
+	return true;
+	}
+}
+</script>	
+<meta name="GENERATOR" content="PageBreeze Free HTML Editor (http://www.pagebreeze.com)">
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
+<title>Change Password</title>
+</head>
+<body bgcolor="#ffffff">
+<p align="center"><strong><font color="#004080" size="7" face="GE Inspira Pitch"><u>Update&nbsp;Password 
+Page</u>  
+</font></strong></p>
+<p align="center"><strong><font face="GE Inspira Pitch" color="#004080" size="7"><font size="4"> 
+</font> </font></strong>&nbsp;</p>
+<form name="addempform" onSubmit="return checkFields()" method="post"><strong><font face="GE Inspira Pitch" color="#004080" size="7"><font face="GE Inspira Pitch" size="4">
+<p align="center"><strong><font face="GE Inspira Pitch" color="#004080" size="7"><font face="GE Inspira Pitch" size="4">Old Password&nbsp;</font>&nbsp;&nbsp;</font><input 
+style="WIDTH: 153px; HEIGHT: 22px" name="oldpasswd" type=password></strong></p>
+<p align="center">New Password 
+:</font>&nbsp;&nbsp; </font><input 
+style="WIDTH: 153px; HEIGHT: 22px" name="newpasswd" type=password>
+<p align="center"><input type="submit" value="Update" name="submit">&nbsp;&nbsp;&nbsp;<input type="reset" value=" Reset" name="reset">
+</form><form action="welcomeAdmin.php">
+<p align="center">&nbsp;
+<input type="submit" value="Go Back">
+</form></p>
+</body>
+</html>

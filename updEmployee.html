@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function()
+{
+	if (location.search != "")
+	{
+		var x = location.search.substr(1).split(";")
+		var y = x[0].split("&");
+		var z=y[0].split("=");
+		if(z[1]=="false")
+		{
+			alert("Please Enter a valid SSO");
+		}
+		else
+		{
+			alert("The Details Were Updated Successfully");
+		}
+	}
+}
+</script>
+<meta name="GENERATOR" content="PageBreeze Free HTML Editor (http://www.pagebreeze.com)">
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
+<title>Update Employee</title>
+</head>
+<body bgcolor="#ffffff">
+<p align="center"><strong><font color="#004080" size="7"><u>Update 
+Employee 
+Page</u>  
+</font></strong></p>
+<p align="center"><strong><font color="#004080" 
+size=7></font></strong>&nbsp;</p>
+<form name="adminform" action="updEmployee.php" method="post">
+<p align="center"><strong><font color="#004080" size="7"><font size="4">SSO 
+ID 
+:</font>&nbsp;&nbsp; </font><input 
+style="WIDTH: 153px; HEIGHT: 22px" name="ssoid"></strong></p><strong>
+<p align="center">
+<p align="center"><input type="submit" value="Retreive Info" name="submit">&nbsp;&nbsp;&nbsp;<input type="reset" value=" Reset" name="reset"> 
+</form></p></font></strong>
+<p></p>
+<form action="welcomeAdmin.php">
+<p align="center">&nbsp;
+<input type="submit" value="Go Back">
+</form></p>
+</body>
+</html>
